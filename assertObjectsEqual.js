@@ -20,3 +20,10 @@ const assertObjectsEqual = function (object1, object2) {
     console.log(`❌ Assertion Failed: ${inspect(object1)} !== ${inspect(object2)}`);
   }
 };
+
+const ab = { a: "1", b: "2" };
+const ba = { b: "2", a: "1" };
+const abc = { a: "1", b: "2", c: "3" };
+
+assertObjectsEqual(eqObjects(ab, ba));
+assertObjectsEqual(eqObjects(ab, abc));
